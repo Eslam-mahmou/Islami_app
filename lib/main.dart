@@ -3,13 +3,12 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islamy_app/Core/AppProvider/AppConfigProvider.dart';
 import 'package:islamy_app/Core/Utlis/AppTheme.dart';
 import 'package:islamy_app/Moduls/SplashPage/SplashView.dart';
+import 'package:islamy_app/layout.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  Provider(
-    create: (context) => AppConfigProvider(),
-  );
-  runApp(const Islami_app());
+  runApp(Provider(
+      create: (context) => AppConfigProvider(), child: const Islami_app()));
 }
 
 class Islami_app extends StatelessWidget {
@@ -30,6 +29,7 @@ class Islami_app extends StatelessWidget {
       themeMode: provider.currentTheme,
       routes: {
         SplashView.routeName: (context) => const SplashView(),
+        HomeView.routeName : (context) => const HomeView(),
       },
     );
   }
