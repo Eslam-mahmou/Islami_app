@@ -13,4 +13,10 @@ class ImageAssets {
   static const String sebha_icon = "assets/icons/sebha_icone.png";
   static const String radio_icon = "assets/icons/radio_icon.png";
   static const String play_icon = "assets/icons/icon_play.png";
+  static const String head_of_sebha="assets/Images/head of seb7a.png";
+  static const String head_of_dark_sebha="assets/Images/head of seb7a_dark.png";
+  static const String sebha_dak_image ="assets/Images/sebha_image_dark.png";
+  static const String  icon_previous = "assets/icons/Icon metro-previous.png";
+  static const String  icon_next = "assets/icons/Icon metro-next.png";
+  static const String  icon_radio_paly = "assets/icons/icon_radio_play.png";
 }

@@ -5,6 +5,9 @@ class AppTheme{
   static ThemeData lightTheme=ThemeData(
     scaffoldBackgroundColor: Colors.transparent,
     appBarTheme:const AppBarTheme(
+      iconTheme: IconThemeData(
+        color: AppColors.blackColor,
+      ),
       elevation: 0,
       color: Colors.transparent
     ),
@@ -32,7 +35,10 @@ class AppTheme{
       selectedItemColor: AppColors.blackColor,
       showSelectedLabels: true,
       unselectedItemColor: AppColors.whiteColor,
-      showUnselectedLabels: false
+      showUnselectedLabels: false,
+      selectedIconTheme: IconThemeData(
+        size: 32
+      )
 
 
     )
@@ -40,6 +46,9 @@ class AppTheme{
   static ThemeData darkTheme=ThemeData(
     scaffoldBackgroundColor: Colors.transparent,
       appBarTheme:const AppBarTheme(
+        iconTheme: IconThemeData(
+          color: AppColors.whiteColor,
+        ),
         elevation: 0,
         color: Colors.transparent
       ),
@@ -66,7 +75,10 @@ class AppTheme{
         selectedItemColor: AppColors.yellowColor,
         showSelectedLabels: true,
           unselectedItemColor: AppColors.whiteColor,
-          showUnselectedLabels: false
+          showUnselectedLabels: false,
+        selectedIconTheme: IconThemeData(
+          size: 32
+        )
 
       )
   );
