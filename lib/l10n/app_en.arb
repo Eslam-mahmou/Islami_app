@@ -4,5 +4,9 @@
 "hadith":"Hadith",
 "sebha":"Tasbeh",
 "radio":"Radio",
-"setting":"Setting"
+"setting":"Setting",
+"sura_name":"Sura Name  ",
+"verses":   "Sura Number",
+"hadith" :"Ahadith",
+"tasbeh":"Number of Tasbeehs"
 }
