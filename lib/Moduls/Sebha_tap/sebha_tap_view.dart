@@ -55,7 +55,7 @@ class _SebhaTapViewState extends State<SebhaTapView>
           alignment: Alignment.topCenter,
           children: [
             Positioned(
-                top: 27,
+                top: height * .035,
                 child: AnimatedBuilder(
                   animation: animation,
                   builder: (context, child) => Transform.rotate(
