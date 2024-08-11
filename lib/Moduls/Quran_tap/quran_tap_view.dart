@@ -205,7 +205,7 @@ class _QuranTapViewState extends State<QuranTapView> {
                           onTap: () {
                             Navigator.pushNamed(
                                 context, QuranTapDetails.routeName,
-                            arguments: SuraItem(suraName: suraNames[index], suraNumber: index +1));
+                            arguments: SuraItem(suraName: suraNames[index], suraNumber: index  ));
                           },
                           child: Text(
                             suraNames[index],
