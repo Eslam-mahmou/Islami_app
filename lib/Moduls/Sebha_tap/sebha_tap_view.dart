@@ -12,31 +12,12 @@ class SebhaTapView extends StatefulWidget {
   @override
   State<SebhaTapView> createState() => _SebhaTapViewState();
 }
-class _SebhaTapViewState extends State<SebhaTapView>
-    with SingleTickerProviderStateMixin {
-  late Animation<double> animation;
 
-  late AnimationController controller;
-
-  @override
-  void initState() {
-    controller = AnimationController(
-      vsync: this,
-      duration: const Duration(microseconds: 500),
-    );
-    setRotate(50);
-  }
-  @override
-  void dispose() {
-    controller.dispose();
-    super.dispose();
-  }
-  void setRotate(int degree) {
-    final angle = (degree * 3.14) / 360;
-    animation = Tween<double>(begin: 0, end: angle).animate(controller);
-  }
+class _SebhaTapViewState extends State<SebhaTapView> {
   int currentNumber = 0;
+  double angle = 0;
   String prarer = "سبحان الله";
+
   @override
   Widget build(BuildContext context) {
     var provider = Provider.of<AppConfigProvider>(context);
@@ -56,16 +37,13 @@ class _SebhaTapViewState extends State<SebhaTapView>
           children: [
             Positioned(
                 top: height * .035,
-                child: AnimatedBuilder(
-                  animation: animation,
-                  builder: (context, child) => Transform.rotate(
-                    angle: animation.value,
-                    child: Image.asset(
-                      ImageAssets.sebha_image,
-                      color: provider.isDarkMode()
-                          ? AppColors.yellowColor
-                          : AppColors.primaryLightColor,
-                    ),
+                child: Transform.rotate(
+                  angle: angle,
+                  child: Image.asset(
+                    ImageAssets.sebha_image,
+                    color: provider.isDarkMode()
+                        ? AppColors.yellowColor
+                        : AppColors.primaryLightColor,
                   ),
                 )),
             Image.asset(
@@ -103,15 +81,15 @@ class _SebhaTapViewState extends State<SebhaTapView>
         ),
         CustomSebhaButton(
             onPressed: () {
-              controller.forward(from: 0);
               onTapped();
-              setState(() {});
             },
             prarer: prarer)
       ],
     );
   }
+
   void onTapped() {
+    angle +=.15;
     if (currentNumber < 100) {
       currentNumber++;
     } else {
@@ -127,5 +105,6 @@ class _SebhaTapViewState extends State<SebhaTapView>
     } else if (currentNumber == 100) {
       prarer = "لا إله إلا الله";
     }
+    setState(() {});
   }
 }
