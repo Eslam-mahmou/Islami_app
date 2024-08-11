@@ -8,5 +8,11 @@
 "sura_name":"Sura Name  ",
 "verses":   "Sura Number",
 "hadith" :"Ahadith",
-"tasbeh":"Number of Tasbeehs"
+"tasbeh":"Number of Tasbeehs",
+"language":"Language",
+"mode":"Mode",
+"english":"English",
+"arabic":"Arabic",
+"dark":"Dark",
+"light":"Light"
 }
